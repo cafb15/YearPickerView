@@ -45,10 +45,6 @@ public class YearPickerView extends ListView {
         minDate.set(1900, Calendar.JANUARY, 1);
         maxDate.set(2100, Calendar.DECEMBER, 31);
 
-        final LayoutParams frame = new LayoutParams(
-                LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        setLayoutParams(frame);
-
         final Resources res = context.getResources();
         viewSize = res.getDimensionPixelOffset(R.dimen.size_226dp);
         childSize = res.getDimensionPixelOffset(R.dimen.size_64dp);

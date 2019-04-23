@@ -142,6 +142,7 @@ public class YearAdapter extends BaseAdapter {
             tvYear.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
             tvYear.setTextColor(textYearColorActivated);
         } else {
+            tvYear.setTypeface(Typeface.DEFAULT);
             tvYear.setTextSize(TypedValue.COMPLEX_UNIT_PX, textYearSize);
             tvYear.setTextColor(textYearColor);
         }

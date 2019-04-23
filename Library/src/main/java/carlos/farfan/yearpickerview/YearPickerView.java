@@ -65,7 +65,9 @@ public class YearPickerView extends ListView {
             }
         });
 
-        yearAdapter = new YearAdapter(context, textYearSize, textYearColor, textYearColorActivated);
+        yearAdapter = new YearAdapter(context);
+        yearAdapter.setTextYearSize(textYearSize);
+        yearAdapter.setTextColors(textYearColorActivated, textYearColor);
         setAdapter(yearAdapter);
         setRange(minDate, maxDate);
         setYear(Calendar.getInstance().get(Calendar.YEAR));

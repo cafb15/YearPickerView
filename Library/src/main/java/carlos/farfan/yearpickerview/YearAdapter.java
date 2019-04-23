@@ -26,11 +26,7 @@ public class YearAdapter extends BaseAdapter {
     private int minYear;
     private int count;
 
-    YearAdapter(Context context, int textYearSize, int textYearColor, int textYearColorActivated) {
-        this.textYearSize = textYearSize;
-        this.textYearColor = textYearColor;
-        this.textYearColorActivated = textYearColorActivated;
-
+    YearAdapter(Context context) {
         inflater = LayoutInflater.from(context);
     }
 
@@ -70,7 +66,6 @@ public class YearAdapter extends BaseAdapter {
 
         if (hasNewView || tvYear.isActivated() != activated) {
             fillText(tvYear, activated);
-            tvYear.setActivated(activated);
         }
 
         tvYear.setText(String.valueOf(year));
@@ -103,6 +98,15 @@ public class YearAdapter extends BaseAdapter {
         return true;
     }
 
+    void setTextYearSize(int textYearSize) {
+        this.textYearSize = textYearSize;
+    }
+
+    void setTextColors(int textYearColorActivated, int textYearColor) {
+        this.textYearColorActivated = textYearColorActivated;
+        this.textYearColor = textYearColor;
+    }
+
     void setRange(Calendar minDate, Calendar maxDate) {
         final int minYear = minDate.get(Calendar.YEAR);
         final int count = maxDate.get(Calendar.YEAR) - minYear + 1;
@@ -131,6 +135,8 @@ public class YearAdapter extends BaseAdapter {
 
     private void fillText(TextView tvYear, boolean activated) {
         tvYear.setTextSize(TypedValue.COMPLEX_UNIT_PX, textYearSize);
+        tvYear.setActivated(activated);
+
         if (activated) {
             tvYear.setTextColor(textYearColorActivated);
         } else {

@@ -1,6 +1,7 @@
 package carlos.farfan.yearpickerview;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -134,12 +135,14 @@ public class YearAdapter extends BaseAdapter {
     }
 
     private void fillText(TextView tvYear, boolean activated) {
-        tvYear.setTextSize(TypedValue.COMPLEX_UNIT_PX, textYearSize);
         tvYear.setActivated(activated);
 
         if (activated) {
+            tvYear.setTypeface(tvYear.getTypeface(), Typeface.BOLD);
+            tvYear.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
             tvYear.setTextColor(textYearColorActivated);
         } else {
+            tvYear.setTextSize(TypedValue.COMPLEX_UNIT_PX, textYearSize);
             tvYear.setTextColor(textYearColor);
         }
     }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="YearLabelTheme" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">@dimen/size_16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="YearLabelThemeActivated" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorControlActivated</item>
+        <item name="android:textSize">@dimen/size_26sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+</resources>

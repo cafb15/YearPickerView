@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="YearPickerView">
+        <attr name="textYearSize" format="dimension"/>
+        <attr name="textYearColorActivated" format="color"/>
+        <attr name="textYearColor" format="color"/>
+    </declare-styleable>
+</resources>
